@@ -1,20 +1,35 @@
 package io.chrisdavenport.progressbar
 
+import cats.data.NonEmptyList
 
-final case class ProgressBarStyle(
-  leftBracket: String,
-  rightBracket: String,
-  block: Char,
-  space: Char,
-  fractionSymbols: String
-)
+sealed trait ProgressBarStyle {
+  val leftBracket: Char
+  val rightBracket: Char
+  val block: Char
+  val space: Char
+  val fractionSymbols: NonEmptyList[Char]
+}
 
 object ProgressBarStyle {
-  val COLORFUL_UNICODE_BLOCK = ProgressBarStyle("\u001b[33m│", "│\u001b[0m", '█', ' ', " ▏▎▍▌▋▊▉")
-
-    /** Use Unicode block characters to draw the progress bar. */
-  val UNICODE_BLOCK = ProgressBarStyle("│", "│", '█', ' ', " ▏▎▍▌▋▊▉")
-
-    /** Use only ASCII characters to draw the progress bar. */
-  val ASCII = ProgressBarStyle("[", "]", '=', ' ', ">")
+  // case object COLORFUL_UNICODE_BLOCK extends ProgressBarStyle {
+  //   val leftBracket: String = "\u001b[33m│"
+  //   val rightBracket: String = "│\u001b[0m"
+  //   val block: Char = '█'
+  //   val space: Char = ' '
+  //   val fractionSymbols: String = " ▏▎▍▌▋▊▉"
+  // }
+  case object UNICODE_BLOCK extends ProgressBarStyle {
+    val leftBracket: Char = '│'
+    val rightBracket: Char = '│'
+    val block: Char = '█'
+    val space: Char = ' '
+    val fractionSymbols: NonEmptyList[Char] = NonEmptyList.of('▏', '▎', '▍', '▌', '▋', '▊', '▉')
+  }
+  case object ASCII extends ProgressBarStyle {
+    val leftBracket: Char = '['
+    val rightBracket: Char = ']'
+    val block: Char = '='
+    val space: Char = ' '
+    val fractionSymbols: NonEmptyList[Char] = NonEmptyList.of('>')
+  }
 }
