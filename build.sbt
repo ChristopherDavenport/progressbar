@@ -4,7 +4,7 @@ lazy val core = project.in(file("."))
       name := "progressbar"
     )
 
-val catsV = "1.4.0"
+val catsV = "1.5.0"
 val catsEffectV = "1.1.0"
 val fs2V = "1.0.0"
 
