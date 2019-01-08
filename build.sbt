@@ -6,7 +6,7 @@ lazy val core = project.in(file("."))
 
 val catsV = "1.5.0"
 val catsEffectV = "1.1.0"
-val fs2V = "1.0.0"
+val fs2V = "1.0.2"
 
 val specs2V = "4.3.6"
 val disciplineV = "0.10.0"
