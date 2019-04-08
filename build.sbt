@@ -9,7 +9,7 @@ val catsEffectV = "1.2.0"
 val fs2V = "1.0.4"
 
 val specs2V = "4.5.1"
-val disciplineV = "0.11.0"
+val disciplineV = "0.11.1"
 val scShapelessV = "1.2.1"
 
 val kindProjectorV = "0.9.9"
