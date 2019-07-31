@@ -13,7 +13,7 @@ val disciplineV = "0.11.1"
 val scShapelessV = "1.2.3"
 
 val kindProjectorV = "0.9.10"
-val betterMonadicForV = "0.3.0"
+val betterMonadicForV = "0.3.1"
 
 
 lazy val contributors = Seq(
