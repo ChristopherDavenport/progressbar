@@ -12,7 +12,7 @@ val specs2V = "4.7.0"
 val disciplineV = "0.11.1"
 val scShapelessV = "1.2.3"
 
-val kindProjectorV = "0.9.10"
+val kindProjectorV = "0.10.0"
 val betterMonadicForV = "0.3.1"
 
 
@@ -33,7 +33,7 @@ lazy val commonSettings = Seq(
   crossScalaVersions := Seq(scalaVersion.value, "2.11.12"),
   scalacOptions += "-Yrangepos",
 
-  addCompilerPlugin("org.spire-math" % "kind-projector" % kindProjectorV cross CrossVersion.binary),
+  addCompilerPlugin("org.typelevel" % "kind-projector" % kindProjectorV cross CrossVersion.binary),
   addCompilerPlugin("com.olegpy" %% "better-monadic-for" % betterMonadicForV),
   libraryDependencies ++= Seq(
     "org.typelevel"               %% "cats-core"                  % catsV,
