@@ -10,7 +10,7 @@ val fs2V = "1.0.5"
 
 val specs2V = "4.7.1"
 val disciplineV = "0.11.1"
-val scShapelessV = "1.2.4"
+val scShapelessV = "1.2.5"
 
 val kindProjectorV = "0.10.3"
 val betterMonadicForV = "0.3.1"
