@@ -29,7 +29,7 @@ onLoad in Global := { s =>
 lazy val commonSettings = Seq(
   organization := "io.chrisdavenport",
 
-  scalaVersion := "2.12.14",
+  scalaVersion := "2.13.6",
   crossScalaVersions := Seq(scalaVersion.value, "2.11.12"),
   scalacOptions += "-Yrangepos",
 
