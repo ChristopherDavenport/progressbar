@@ -10,7 +10,7 @@ val fs2V = "1.0.5"
 
 val specs2V = "4.7.1"
 val disciplineV = "0.11.1"
-val scShapelessV = "1.2.5"
+val scShapelessV = "1.3.0"
 
 val kindProjectorV = "0.10.3"
 val betterMonadicForV = "0.3.1"
@@ -45,7 +45,7 @@ lazy val commonSettings = Seq(
     "org.specs2"                  %% "specs2-core"                % specs2V       % Test,
     "org.specs2"                  %% "specs2-scalacheck"          % specs2V       % Test,
     "org.typelevel"               %% "discipline"                 % disciplineV   % Test,
-    "com.github.alexarchambault"  %% "scalacheck-shapeless_1.14"  % scShapelessV  % Test
+    "com.github.alexarchambault"  %% "scalacheck-shapeless_1.15"  % scShapelessV  % Test
   )
 )
 
