@@ -5,3 +5,8 @@ target/
 
 # Ignore [ce]tags files
 tags
+
+.vscode
+.metals
+.bloop
+metals.sbt

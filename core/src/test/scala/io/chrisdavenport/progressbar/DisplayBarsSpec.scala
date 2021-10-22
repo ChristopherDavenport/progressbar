@@ -1,3 +1,4 @@
+/*
 package io.chrisdavenport.progressbar
 
 import cats.implicits._
@@ -68,3 +69,4 @@ class DisplaybarsSpec extends Specification with ScalaCheck {
   //     .setGen2(Gen.posNum[Int].flatMap(total => Gen.choose(0, total).map((_, total))))
   // }
 }
+*/
