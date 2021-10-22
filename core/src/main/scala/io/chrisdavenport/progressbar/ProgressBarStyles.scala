@@ -33,4 +33,13 @@ object ProgressBarStyle {
     val space: Char = ' '
     val fractionSymbols: NonEmptyList[Char] = NonEmptyList.of('>')
   }
+
+  case object ASCII_SPIN extends ProgressBarStyle {
+    val leftBracket: String = '['.toString()
+    val rightBracket: String = ']'.toString()
+    val block: Char = '='
+    val space: Char = ' '
+    val fractionSymbols: NonEmptyList[Char] = NonEmptyList.of('|', '/', '-', '\\')
+  }
+
 }

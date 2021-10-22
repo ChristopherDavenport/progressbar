@@ -25,7 +25,7 @@ object DisplayBars {
       val blockCount = Math.floor(spaceProgress).toInt
       val spaceCount = spaces - 1 - blockCount
 
-      val progressPercent = Math.ceil(totalSymbols * percent).toInt
+      val progressPercent = Math.floor(totalSymbols * percent).toInt
       val progressModulo = progressPercent % style.fractionSymbols.size
       val progress = style.fractionSymbols.toList(progressModulo)
 

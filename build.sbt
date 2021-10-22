@@ -11,7 +11,7 @@ ThisBuild / crossScalaVersions := Seq("2.12.15", scala213, "3.0.2")
 lazy val `progressbar` = project.in(file("."))
   .disablePlugins(MimaPlugin)
   .enablePlugins(NoPublishPlugin)
-  .aggregate(core.jvm, core.js)
+  .aggregate(core.jvm, core.js, examples.jvm, examples.js)
 
 lazy val core = crossProject(JSPlatform, JVMPlatform)
   .crossType(CrossType.Pure)
@@ -27,6 +27,21 @@ lazy val core = crossProject(JSPlatform, JVMPlatform)
   )
   .jsSettings(
     scalaJSLinkerConfig ~= { _.withModuleKind(ModuleKind.CommonJSModule)},
+  )
+
+lazy val examples = crossProject(JSPlatform, JVMPlatform)
+  .crossType(CrossType.Pure)
+  .disablePlugins(MimaPlugin)
+  .enablePlugins(NoPublishPlugin)
+  .in(file("examples"))
+  .dependsOn(core)
+  .settings(
+    libraryDependencies ++= Seq(
+      "org.http4s" %%% "http4s-ember-client" % "0.23.6"
+    )
+  )
+  .jsSettings(
+    scalaJSLinkerConfig ~= { _.withModuleKind(ModuleKind.CommonJSModule)},
     scalaJSUseMainModuleInitializer := true,
-    Compile / mainClass := Some("io.chrisdavenport.progressbar.Main"),
+    Compile / mainClass := Some("Main"),
   )
