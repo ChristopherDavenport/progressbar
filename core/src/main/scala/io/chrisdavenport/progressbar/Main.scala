@@ -10,7 +10,7 @@ object Main extends IOApp {
     _ <- IO.println("")
     _ <- (0 to 200).toList.traverse{i => 
       val percent = i.toDouble / 200
-      val bar = DisplayBars.renderBar(40, percent, ProgressBarStyle.ASCII)
+      val bar = DisplayBars.renderBar(80 - 8, percent, ProgressBarStyle.UNICODE_BLOCK)
       IO.print(bar ++ s" % ${(percent * 100).toInt}") >> IO.sleep(0.025.seconds) >> {
         if (i != 200) IO.print("\u001b[1000D") else IO.print("\n")
       }

@@ -14,6 +14,8 @@ object DisplayBars {
 
     if (percent == 1.0) {
       new String(Array.fill(spaces)(style.block))
+    } else if (percent == 0) {
+      new String(Array.fill(spaces)(style.space))
     } else {
       val symbolsPerSpace = style.fractionSymbols.size
       val totalSymbols = spaces * symbolsPerSpace
