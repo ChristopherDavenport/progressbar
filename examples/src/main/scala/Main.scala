@@ -44,7 +44,7 @@ object Main extends IOApp {
       )
       resources.traverse_{uri => 
         Console[IO].println(uri.toString()) >>
-        downloadAndShow(client, Request[IO](Method.GET, uri))
+        downloadAndShow(client, Request[IO](Method.GET, uri), style = ProgressBarStyle.ASCII_SPIN)
       }
     }
   } yield ExitCode.Success
