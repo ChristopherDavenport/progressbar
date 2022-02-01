@@ -6,7 +6,7 @@ val catsEffectV = "3.2.9"
 
 val scala213 = "2.13.6" 
 ThisBuild / scalaVersion := scala213
-ThisBuild / crossScalaVersions := Seq("2.12.15", scala213, "3.0.2")
+ThisBuild / crossScalaVersions := Seq("2.12.15", scala213, "3.1.1")
 
 lazy val `progressbar` = project.in(file("."))
   .disablePlugins(MimaPlugin)
