@@ -37,7 +37,7 @@ lazy val examples = crossProject(JSPlatform, JVMPlatform)
   .dependsOn(core)
   .settings(
     libraryDependencies ++= Seq(
-      "org.http4s" %%% "http4s-ember-client" % "0.23.6"
+      "org.http4s" %%% "http4s-ember-client" % "0.23.12"
     )
   )
   .jsSettings(
